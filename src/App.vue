@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  papering
+  <router-view></router-view>
 </template>
 
 <style>

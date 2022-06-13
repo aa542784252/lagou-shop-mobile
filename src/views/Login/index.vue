@@ -1,11 +1,15 @@
 <template>
- <div>Login</div>
+  login
+  <p>ppppppppppp</p>
+  <van-button>123</van-button>
 </template>
 
-<script>
-export default {
-  name: ''
-}
+<script setup>
+
 </script>
 
-<style scoped lang=""></style>
+<style>
+p {
+  width: 100px;
+}
+</style>

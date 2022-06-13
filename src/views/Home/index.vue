@@ -1,11 +1,10 @@
 <template>
  <div>Home</div>
+ <layout-footer/>
 </template>
 
-<script>
-export default {
-  name: ''
-}
+<script setup>
+import LayoutFooter from '@components/LayoutFooter.vue';
 </script>
 
 <style scoped lang=""></style>
