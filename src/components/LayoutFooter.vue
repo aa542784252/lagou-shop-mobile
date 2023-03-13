@@ -11,4 +11,8 @@
 <script setup>
 </script>
 
-<style scoped lang=""></style>
+<style scoped lang="scss">
+.van-tabbar {
+  position: fixed ！important;
+}
+</style>
