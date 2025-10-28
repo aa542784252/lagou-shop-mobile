@@ -31,6 +31,18 @@ const routes = [
     name: 'user',
     component: () => import('@/views/User/index.vue'),
   },
+  {
+    path: '/product/:productId',
+    name: 'product',
+    component: () => import('@/views/Product/index.vue'),
+    props: true
+  },
+  {
+    path: '/comment/:productId',
+    name: 'comment',
+    component: () => import('@/views/Comment/index.vue'),
+    props: true
+  },
 ]
 
 // 创建 router 实例

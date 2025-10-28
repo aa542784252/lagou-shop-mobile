@@ -9,6 +9,7 @@
     <van-grid-item
       v-for="item in productsData"
       :key="item.id"
+      :to="{name: 'product',params: {productId: item.id}}"
     >
       <van-image :src="item.image" height="165"/>
       <p class="title" v-text="item.store_name"></p>

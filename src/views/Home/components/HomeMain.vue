@@ -1,5 +1,5 @@
 <template>
-  <div class="home-main">
+  <van-pull-refresh v-model="refreshing" @refresh="onRefresh">
     <!-- 轮播图 -->
     <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
       <van-swipe-item v-for="(item, index) in swipeData" :key="index">
@@ -43,7 +43,7 @@
     >
       <product-list :products-data="productsData"></product-list>
     </van-list>
-  </div>
+  </van-pull-refresh>
 </template>
 
 <script setup>
@@ -62,6 +62,7 @@ const initIndexData = async () => {
     return;
   }
   indexData.value = data.data;
+  refreshing.value = false
 };
 
 const loading = ref(false);
@@ -97,6 +98,14 @@ const newsData = computed(() => {
   return indexData.value.news?.default.newList.list;
 });
 
+const refreshing = ref(false)
+const onRefresh = () => {
+  indexData.value = {}
+  productsData.value = []
+  page = 1
+  initIndexData()
+  initProductsData()
+}
 initIndexData();
 </script>
 
